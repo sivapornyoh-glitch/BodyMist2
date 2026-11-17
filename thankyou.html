@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ขอบคุณสำหรับการสั่งซื้อ — Body Scent</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .thankyou-section {
+      min-height: calc(100vh - 84px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-xl) 0;
+    }
+
+    .thankyou-card {
+      max-width: 560px;
+      width: 100%;
+      margin: 0 auto;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      padding: 4rem 3rem;
+      text-align: center;
+    }
+
+    .thankyou-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1.75rem;
+      border: 1px solid var(--accent-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-bronze);
+    }
+
+    .thankyou-card h1 {
+      font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .thankyou-card p {
+      font-size: 0.98rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .thankyou-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .thankyou-card {
+        padding: 2.75rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">Body <span>Scent</span></a>
+      <nav class="nav-links" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="order.html">สั่งซื้อสินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Thank You Section -->
+  <main>
+    <section class="thankyou-section">
+      <div class="container">
+        <div class="thankyou-card">
+          <div class="thankyou-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span class="section-eyebrow">Order Received</span>
+          <h1>ขอบคุณสำหรับการสั่งซื้อ</h1>
+          <p>
+            เราได้รับข้อมูลคำสั่งซื้อของคุณเรียบร้อยแล้ว ทีมงาน Body Scent จะรีบตรวจสอบรายการและติดต่อกลับโดยเร็วที่สุด
+          </p>
+          <div class="thankyou-actions">
+            <a href="index.html" class="btn btn-primary">กลับหน้าแรก</a>
+            <a href="product.html" class="btn">เลือกชมสินค้าเพิ่มเติม</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <a href="index.html" class="brand-logo">Body <span>Scent</span></a>
+          <p style="margin-top: 0.75rem; max-width: 380px; font-size: 0.9rem;">
+            เปลี่ยนทุกอารมณ์ให้กลายเป็นความหอมที่ใช่ ให้คุณมั่นใจและเป็นตัวเองได้ในทุกจังหวะของวัน
+          </p>
+        </div>
+        <div style="display: flex; gap: 2rem; font-size: 0.9rem;">
+          <a href="index.html">หน้าแรก</a>
+          <a href="product.html">สินค้าทั้งหมด</a>
+          <a href="order.html">สั่งซื้อสินค้า</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Body Scent. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

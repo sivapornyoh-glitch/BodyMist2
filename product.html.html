@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>สินค้าทั้งหมด — Body Scent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">Body <span>Scent</span></a>
+      <nav class="nav-links" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html" class="active">สินค้าทั้งหมด</a>
+        <a href="order.html">สั่งซื้อสินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Catalog Section -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Fragrance Collection</span>
+          <h1>สินค้าทั้งหมดของ Body Scent</h1>
+          <p>เลือกกลิ่นและขนาดที่เหมาะกับสไตล์ของคุณ ทั้งสเปรย์น้ำหอมฉีดตัวและโรลออนระงับกลิ่นกาย</p>
+        </div>
+
+        <!-- Mood Filter Buttons (Rendered by script.js) -->
+        <div id="filter-bar" class="filter-bar"></div>
+
+        <!-- Product Cards Grid (Rendered by script.js) -->
+        <div id="product-list" class="product-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <a href="index.html" class="brand-logo">Body <span>Scent</span></a>
+          <p style="margin-top: 0.75rem; max-width: 380px; font-size: 0.9rem;">
+            เปลี่ยนทุกอารมณ์ให้กลายเป็นความหอมที่ใช่ ให้คุณมั่นใจและเป็นตัวเองได้ในทุกจังหวะของวัน
+          </p>
+        </div>
+        <div style="display: flex; gap: 2rem; font-size: 0.9rem;">
+          <a href="index.html">หน้าแรก</a>
+          <a href="product.html">สินค้าทั้งหมด</a>
+          <a href="order.html">สั่งซื้อสินค้า</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Body Scent. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

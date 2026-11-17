@@ -1,0 +1,606 @@
+/* ==========================================================================
+   Body Scent — Luxury Minimalist Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500;600&display=swap');
+
+:root {
+  /* Core Neutral Palette (White - Cream - Dark Beige) */
+  --bg-primary: #FAF9F6;       /* Off-white / Ivory */
+  --bg-secondary: #F4EFE8;     /* Soft Cream */
+  --bg-tertiary: #E8DFD3;      /* Warm Dark Beige */
+  --bg-surface: #FFFFFF;       /* Pure Card Surface */
+
+  /* Typography Colors */
+  --text-primary: #2B2724;     /* Deep Warm Charcoal */
+  --text-secondary: #5E5751;   /* Muted Taupe */
+  --text-muted: #8E867E;       /* Soft Stone */
+
+  /* Luxury Accent (Soft Gold / Light Bronze) */
+  --accent-gold: #B59461;
+  --accent-bronze: #9C7C4C;
+  --accent-gold-light: rgba(181, 148, 97, 0.14);
+
+  /* Mood Accent Colors (Subtle touches only) */
+  --mood-fresh: #3B594A;       /* Deep Botanical Green */
+  --mood-sweet: #7D6A8E;       /* Muted Mid Lavender */
+  --mood-confident: #3D4F5F;   /* Deep Slate Blue-Grey */
+  --mood-romance: #C27B73;     /* Soft Muted Coral-Red */
+
+  /* Borders & Hairlines */
+  --border-light: #E5DDD2;
+  --border-dark: #4A443F;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Noto Serif Thai', Georgia, serif;
+  --font-sans: 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Generous Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+  --space-2xl: 7.5rem;
+
+  /* Layout & Transitions */
+  --container-max: 1200px;
+  --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --------------------------------------------------------------------------
+   Base Reset & Editorial Typography
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3.6rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --------------------------------------------------------------------------
+   Layout Containers & Section Rhythm
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: var(--space-2xl) 0;
+}
+
+.section-alt {
+  background-color: var(--bg-secondary);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-xl);
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-bronze);
+  margin-bottom: var(--space-xs);
+}
+
+.section-header p {
+  margin-top: var(--space-sm);
+  font-size: 0.98rem;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons & Thin Minimal Borders
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2.1rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--border-dark);
+  background-color: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-bronze);
+  border-color: var(--accent-bronze);
+  color: #FFFFFF;
+}
+
+.btn-accent {
+  border-color: var(--accent-gold);
+  color: var(--accent-bronze);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-gold);
+  color: #FFFFFF;
+}
+
+.btn-sm {
+  padding: 0.6rem 1.35rem;
+  font-size: 0.82rem;
+}
+
+/* --------------------------------------------------------------------------
+   Navigation Bar
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 249, 246, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.brand-logo {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.brand-logo span {
+  color: var(--accent-gold);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-gold);
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.hero {
+  padding: var(--space-2xl) 0;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.hero-content {
+  max-width: 560px;
+}
+
+.hero-subtitle {
+  margin: var(--space-md) 0 var(--space-lg);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-image-frame {
+  padding: 1.25rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+}
+
+/* --------------------------------------------------------------------------
+   Subtle Mood Accents (Dots, Thin Underlines & Minimal Indicators)
+   -------------------------------------------------------------------------- */
+.mood-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.mood-dot.fresh     { background-color: var(--mood-fresh); }
+.mood-dot.sweet     { background-color: var(--mood-sweet); }
+.mood-dot.confident { background-color: var(--mood-confident); }
+.mood-dot.romance   { background-color: var(--mood-romance); }
+
+.mood-underline {
+  display: inline-block;
+  padding-bottom: 0.45rem;
+  border-bottom: 1.5px solid var(--accent-gold);
+}
+
+.mood-underline.fresh     { border-bottom-color: var(--mood-fresh); }
+.mood-underline.sweet     { border-bottom-color: var(--mood-sweet); }
+.mood-underline.confident { border-bottom-color: var(--mood-confident); }
+.mood-underline.romance   { border-bottom-color: var(--mood-romance); }
+
+.mood-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-primary);
+}
+
+/* Mood Filter Tabs */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: var(--space-xl);
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.4rem;
+  background-color: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--border-dark);
+  color: var(--text-primary);
+}
+
+.filter-btn.active {
+  border-color: var(--border-dark);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   Mood Overview Grid (4 Scents)
+   -------------------------------------------------------------------------- */
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.mood-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  padding: 2.25rem 1.75rem;
+  transition: var(--transition);
+}
+
+.mood-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-3px);
+}
+
+.mood-card h3 {
+  margin-bottom: 0.85rem;
+}
+
+.mood-card p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Product Grid & Cards
+   -------------------------------------------------------------------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.product-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  border-color: var(--border-dark);
+}
+
+.product-image-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.03);
+}
+
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(250, 249, 246, 0.92);
+  border: 1px solid var(--border-light);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+}
+
+.product-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.product-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.product-price {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  background-color: var(--bg-tertiary);
+  border-top: 1px solid var(--border-light);
+  padding: var(--space-xl) 0 var(--space-lg);
+  color: var(--text-secondary);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(74, 68, 63, 0.15);
+}
+
+.footer-bottom {
+  padding-top: var(--space-md);
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Design (Tablet & Mobile)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --space-xl: 3.5rem;
+    --space-2xl: 4.5rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .navbar-inner {
+    height: 70px;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  .mood-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-body {
+    padding: 1.35rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .product-footer .btn {
+    width: auto;
+  }
+}
